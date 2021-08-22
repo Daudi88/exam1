@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/********************************************************/
+/* GLOBALS                                              */
+/********************************************************/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #001B36;
+    --clr-secondary: white;
+    --clr-accent: #DAE8FC;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/********************************************************/
+/* HEADER                                               */
+/********************************************************/
+.header {
+    background-color: var(--clr-primary);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+}
+
+.hamburger {
+    display: none
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--clr-secondary);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-items {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--clr-secondary);
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--clr-secondary);
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: var(--clr-secondary);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27 px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .nav-link {
+        color: var(--clr-primary);
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/********************************************************/
+/* VÄDERAPPEN                                           */
+/********************************************************/
+.weather-container {
+    background-color: white;
+    border: 1px solid var(--clr-primary);
+    border-radius: 25px;
+    width: 16em;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.weather-display {
+    background-color: var(--clr-accent);
+    margin-bottom: 2.5em;
+    padding: 0.5em;
+}
+
+/********************************************************/
+/* FOOTER                                               */
+/********************************************************/
+footer {
+    display: flex;
+    background-color: var(--clr-primary);
+    justify-content: center;
+}
+
+.social-link {
+    fill: white;
+    height: 2em;
+    width: 2em;
+    /* padding: 0.5em; */
+    margin: 0.75em;
+}
