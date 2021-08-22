@@ -54,11 +54,11 @@ img {
 
 .bar {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
+    width: 2.5em;
+    height: .3em;
+    margin: .5em auto;
     background-color: var(--clr-secondary);
-    border-radius: 10px;
+    border-radius: 1em;
     transition: 0.3s;
 }
 
@@ -100,7 +100,6 @@ img {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27 px rgba(0, 0, 0, 0.05);
     }
 
     .nav-menu.active {
@@ -120,16 +119,16 @@ img {
         cursor: pointer;
     }
 
-    .hamburger.active .bar:nth-child(2) {
+    .hamburger.active .bar1 {
+        transform: translateY(.8em) rotate(45deg);
+    }
+
+    .hamburger.active .bar2 {
         opacity: 0;
     }
 
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+    .hamburger.active .bar3 {
+        transform: translateY(-.8em) rotate(-45deg);
     }
 }
 
