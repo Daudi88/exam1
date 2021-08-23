@@ -13,8 +13,9 @@
 
 :root {
     --clr-primary: #001B36;
+    --clr-primary-light: #DAE8FC;
     --clr-secondary: white;
-    --clr-accent: #DAE8FC;
+    --clr-accent: #003569;
 }
 
 html {
@@ -52,7 +53,7 @@ img {
     display: none
 }
 
-.bar {
+.hamburger-line {
     display: block;
     width: 2.5em;
     height: .3em;
@@ -78,10 +79,12 @@ img {
     font-weight: 500;
     color: var(--clr-secondary);
     text-transform: uppercase;
+    padding: 1em;
 }
 
 .nav-link:hover {
-    color: var(--clr-accent);
+    background-color: var(--clr-accent);
+    color: var(--clr-secondary);
 }
 
 .nav-logo {
@@ -107,7 +110,7 @@ img {
     }
 
     .nav-item {
-        margin: 2.5rem 0;
+        margin: 1.5em 0;
     }
 
     .nav-link {
@@ -119,17 +122,64 @@ img {
         cursor: pointer;
     }
 
-    .hamburger.active .bar1 {
+    .hamburger.active .hamburger-line1 {
         transform: translateY(.8em) rotate(45deg);
     }
 
-    .hamburger.active .bar2 {
+    .hamburger.active .hamburger-line2 {
         opacity: 0;
     }
 
-    .hamburger.active .bar3 {
+    .hamburger.active .hamburger-line3 {
         transform: translateY(-.8em) rotate(-45deg);
     }
+}
+
+/********************************************************/
+/* HERO                                                 */
+/********************************************************/
+.hero {
+    background-color: var(--clr-primary);
+    background: url(../img/forest-medium.jpg);
+    background-position: right;
+    min-height: calc(80vh - 10rem);
+    padding: 2em 0;
+    text-align: center;
+    color: var(--clr-secondary);
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    font-size: clamp(5rem, 1.5rem + 5vw, 6rem);
+    margin: 2em 0.5em 4em;
+    font-weight: normal;
+}
+
+.rectangle {
+    background-color: var(--clr-primary);
+    padding: 2em 3em 4em;
+}
+
+.hero h3 {
+    font-size: 2.75rem;
+    font-weight: normal;
+    padding: 1.25em;
+}
+
+.btn {
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    font-size: 2rem;
+    background-color: var(--clr-primary-light);
+    padding: 0.35em 0.85em;
+    border-radius: 25px;
+    bottom: 2em;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--clr-accent);
+    color: var(--clr-secondary);
 }
 
 /********************************************************/
@@ -161,8 +211,8 @@ footer {
 
 .social-link {
     fill: white;
-    height: 2em;
-    width: 2em;
+    height: 2.25em;
+    width: 2.25em;
     /* padding: 0.5em; */
     margin: 0.75em;
 }
