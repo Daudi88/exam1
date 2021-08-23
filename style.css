@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* GLOBALS */
+:root {
+    --clr-primary: #001B36;
+    --clr-primary-light: #DAE8FC;
+    --clr-secondary: #FFFFFF;
+    --clr-accent: #003569;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr-primary-light);
+    font-family: "Roboto", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    color: var(--clr-secondary);
+}
+
+/* NAV */
+.navbar {
+    background-color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    position: relative;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    display: none;
+}
+
+.hamburger {
+    position: absolute;
+    right: 1em;
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    display: block;
+    width: 2em;
+    height: 0.2em;
+    margin: 0.4em auto;
+    background-color: var(--clr-secondary);
+    border-radius: 1em;
+    transition: 0.3s;
+}
+
+/* HERO */
+.hero {
+    background-color: var(--clr-primary);
+    background: url(img/forest-medium.jpg);
+    height: calc(100vh - 3em);
+    padding: 2em 1em;
+}
