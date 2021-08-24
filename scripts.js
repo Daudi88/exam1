@@ -1,9 +1,10 @@
+// HAMBURGERMENY
 const hamburger = document.querySelector(".hamburger")
 const navMenu = document.querySelector(".nav-menu")
 
-hamburger.addEventListener("click", hamburgerMenu)
+hamburger.addEventListener("click", mobileMenu)
 
-function hamburgerMenu() {
+function mobileMenu() {
     hamburger.classList.toggle("active")
     navMenu.classList.toggle("active")
 }
