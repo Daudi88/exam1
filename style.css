@@ -136,8 +136,8 @@ header {
 .hero h3 {
     font-weight: normal;
     font-size: 1.75rem;
-    padding-inline: 1.25em;
-    padding: 1.25em 1em 0;
+    padding: 1.25em;
+    margin: 0;
 }
 
 .btn {
@@ -151,7 +151,7 @@ header {
     border-radius: 1.5em;
     width: 60%;
     font-weight: bold;
-    margin-bottom: 3em;
+    margin-bottom: 2.5em;
 }
 
 .btn:hover,
@@ -160,3 +160,29 @@ header {
     color: var(--clr-secondary);
 }
 
+/* ABOUT */
+.about {
+    background-color: var(--clr-secondary);
+    padding: 2em;
+}
+
+.about h2 {
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.about p {
+    line-height: 1.5;
+    color: var(--clr-primary);
+    font-size: 1.2rem;
+}
+
+.description {
+    padding-block: 1.75em;
+}
+
+.badge {
+    width: 5em;
+}
