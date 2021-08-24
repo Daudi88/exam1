@@ -199,6 +199,7 @@ header {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, minmax(2em, 75px));
+    grid-template-rows: minmax(8em, auto) repeat(5, 5em);
     min-height: 50vh;
 }
 
@@ -228,6 +229,7 @@ header {
     border: 1px solid var(--clr-secondary);
     background-color: var(--clr-accent-light);
     text-transform: uppercase;
+    text-align: center;
     font-size: 1.5rem;
     opacity: 0.75;
 }
