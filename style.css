@@ -71,7 +71,7 @@ header {
     background: url(img/forest-medium.jpg);
     background-size: cover;
     background-position: right;
-    min-height: calc(85vh - 3em);
+    min-height: calc(90vh - 3em);
     padding: 2em 0;
     position: relative;
 }
