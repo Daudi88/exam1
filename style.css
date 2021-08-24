@@ -71,7 +71,7 @@ header {
     background: url(img/forest-medium.jpg);
     background-size: cover;
     background-position: right;
-    height: calc(80vh - 3em);
+    min-height: calc(85vh - 3em);
     padding: 2em 0;
     position: relative;
 }
@@ -87,16 +87,15 @@ header {
 .hero-rectangle {
     position: absolute;
     background-color: var(--clr-primary);
-    padding: 1.2em;
     text-align: center;
-    margin-top: 10em;
     bottom: 0;
 }
 
 .hero h3 {
     font-weight: normal;
     font-size: 1.75rem;
-    padding: 0 1em;
+    padding-inline: 1.25em;
+    padding: 1.25em 1em 0;
 }
 
 .btn {
@@ -108,8 +107,9 @@ header {
     text-transform: uppercase;
     padding: 0.8em 1.5em;
     border-radius: 1.5em;
-    margin-bottom: 0.5em;
     width: 60%;
+    font-weight: bold;
+    margin-bottom: 3em;
 }
 
 .btn:hover,
