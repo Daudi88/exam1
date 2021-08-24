@@ -200,7 +200,8 @@ header {
     grid-template-columns: repeat(4, minmax(2em, 75px));
     grid-template-rows: minmax(10em, auto) repeat(5, 4.5em);
     min-height: 50vh;
-    max-width: 85%;
+    min-width: 15em;
+    max-width: 20em;
     background-color: black;
     border-radius: 2em;
     padding: 1em;
