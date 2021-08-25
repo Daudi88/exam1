@@ -205,9 +205,14 @@ const KELVIN = 273
 const apiKey = "d0ddcde2cb4705f0886de5a8d08c5456"
 
 // Hämtar nuvarande position
-if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(setPosition, showError)
+if (navigator.geolocation) {
+    alert("Geo Location API works well on your current browser!");
+} else {
+    alert("Geo Location API is not supported on your current browser!");
 }
+// if ("geolocation" in navigator) {
+//     navigator.geolocation.getCurrentPosition(setPosition, showError)
+// }
 
 // Tar ut kordinaterna som vi skickar till apiet
 function setPosition(position) {
