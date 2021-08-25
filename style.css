@@ -286,7 +286,7 @@ header {
 .weather {
     background-color: var(--clr-secondary);
     margin-block: 3em;
-    padding-bottom: 3.8rem;
+    padding-bottom: 3.8em;
     display: block;
 }
 
@@ -296,13 +296,13 @@ header {
 
 .weather-header {
     margin: 0 auto;
-    height: 3.8rem;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.weather-header {
+.weather-header p{
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
@@ -318,6 +318,9 @@ header {
 .weather-icon {
     width: 100%;
     height: 12em;
+}
+
+.weather-icon img {
     width: 12em;
     margin: 0 auto;
 }
@@ -328,24 +331,23 @@ header {
     padding: 0;
 }
 
-.temperature-display p {
+.weather-temperature p {
     font-size: 4rem;
     margin: 0;
     padding: 0;
 }
 
-.temperature-display span {
+.weather-temperature span {
     font-weight: normal;
     font-size: 2.5rem;
 }
 
 .weather-description p {
-    font-size: 1.5rem;
-    padding-top: 1em;
+    font-size: 1.6rem;
 }
 
-.location {
-    font-size: 1.2rem;
+.weather-location p{
+    font-size: 1.3rem;
     padding-bottom: 2em;
 }
 

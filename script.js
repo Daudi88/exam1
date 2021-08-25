@@ -192,4 +192,51 @@ equals.addEventListener("click", () => {
 })
 
 // Väderappen
-const a
+const weatherIconDiv = document.querySelector(".weather-icon")
+const weatherTemperature = document.querySelector(".weather-temperature p")
+const weatherDescription = document.querySelector(".weather-description p")
+const weatherLocation = document.querySelector(".weather-location p")
+const weatherNotification = document.querySelector("weather-notification") 
+
+const weather = {}
+weather.temperature = {}
+
+const KELVIN = 273
+const apiKey = "d0ddcde2cb4705f0886de5a8d08c5456"
+
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(setPosition)
+}
+
+function setPosition(position) {
+    let latitude = position.coords.latitude
+    let longitude = position.coords.longitude
+    getWeather(latitude, longitude)
+}
+
+function getWeather(latitude, longitude) {
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
+    console.log(api);
+
+    fetch(api).then(function(response) {
+        let data = response.json()
+        return data
+    }).then(function(data) {
+        weather.temperature.value = Math.floor(data.main.temp - KELVIN)
+        weather.description = data.weather[0].description
+        weather.icon = data.weather[0].icon
+        weather.city = data.name
+        weather.country = data.sys.country
+    }).then(function() {
+        displayWeather()
+    })
+}
+
+function displayWeather() {
+    weatherIconDiv.innerHTML = `<img src="img/weather-icons/${weather.icon}.png">`
+    weatherTemperature.innerHTML = `${weather.temperature.value}°<span>C</span>`
+    weatherDescription.innerHTML = weather.description
+    weatherLocation.innerHTML = `${weather.city}, ${weather.country}`
+}
+
+
