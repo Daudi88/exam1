@@ -197,11 +197,10 @@ header {
 
 /* Projekt*/
 .project {
-    min-height: 50vh;
+    min-height: 28em;
     min-width: 15em;
     max-width: 20em;
     border-radius: 2em;
-    
     margin: 0 auto;
 }
 
@@ -214,6 +213,7 @@ header {
     border-radius: 2em;
     touch-action: manipulation;
     padding: 1em;
+
 }
 
 .calc-display {
@@ -329,4 +329,28 @@ header {
 .location {
     font-size: 1.2rem;
     margin-bottom: 2em;
+}
+
+/* Footer */
+footer {
+    background-color: var(--clr-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0.8em;
+}
+
+#Capa_1,
+#Capa_2 {
+    fill: var(--clr-secondary);
+    opacity: 0.85;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+}
+
+#Capa_1:hover,
+#Capa_2:hover {
+    opacity: 1;
 }
