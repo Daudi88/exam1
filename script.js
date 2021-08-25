@@ -1,4 +1,4 @@
-// NAV
+// Nav
 const hamburger = document.querySelector(".hamburger")
 const navMenu = document.querySelector(".nav-menu")
 
@@ -10,7 +10,17 @@ function hamburgerMenu() {
     navMenu.classList.toggle("active")
 }
 
-// CALCULATOR
+// Miniräknaren
+const clear = document.querySelector(".clear")
+const del = document.querySelector(".delete")
+const percent = document.querySelector(".percent")
+const numbers = document.querySelectorAll(".number")
+const comma = document.querySelector(".comma")
+const operators = document.querySelectorAll(".operator")
+const display = document.querySelector(".calc-display")
+const previousDisplay = document.querySelector(".previous-display")
+const equals = document.querySelector(".equals")
+
 class Calculator {
     constructor(currentDisplay, previousDisplay) {
         this.currentDisplay = currentDisplay
@@ -137,17 +147,9 @@ class Calculator {
     }
 }
 
-const clear = document.querySelector(".clear")
-const del = document.querySelector(".delete")
-const percent = document.querySelector(".percent")
-const numbers = document.querySelectorAll(".number")
-const comma = document.querySelector(".comma")
-const operators = document.querySelectorAll(".operator")
-const display = document.querySelector(".calc-display")
-const previousDisplay = document.querySelector(".previous-display")
-const equals = document.querySelector(".equals")
-let operatorCtr = 0
+
 const calculator = new Calculator(display)
+let operatorCtr = 0
 
 clear.addEventListener("click", () => {
     calculator.clear()
@@ -189,3 +191,5 @@ equals.addEventListener("click", () => {
     operatorCtr = 0
 })
 
+// Väderappen
+const a
