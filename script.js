@@ -143,7 +143,7 @@ const percent = document.querySelector(".percent")
 const numbers = document.querySelectorAll(".number")
 const comma = document.querySelector(".comma")
 const operators = document.querySelectorAll(".operator")
-const display = document.querySelector(".display")
+const display = document.querySelector(".calc-display")
 const previousDisplay = document.querySelector(".previous-display")
 const equals = document.querySelector(".equals")
 let operatorCtr = 0
@@ -167,6 +167,7 @@ percent.addEventListener("click", () => {
 numbers.forEach(number => number.addEventListener("click", () => {
     calculator.addNumber(number.innerHTML)
     operators.forEach(operator => operator.classList.remove("chosen"))
+    operatorCtr = 0
 }))
 
 comma.addEventListener("click", () => {

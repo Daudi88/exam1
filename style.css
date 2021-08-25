@@ -218,12 +218,10 @@ header {
     flex-direction: column;
     color: var(--clr-secondary);
     padding: 1rem 1rem 0;
-    touch-action: manipulation;
-}
-
-.display {
     font-size: 3rem;
     font-weight: lighter;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .calc-btn {
