@@ -46,15 +46,19 @@ class Calculator {
 
     addNumber(number) {
         // resets valueToSave om man börjar lägga till nya siffror
-        if (this.valueToSave != '') this.current = ''
+        if (this.valueToSave != '') {
+            this.clear()
+        }
 
         // Om det första man trycker är , ska 0:an sparas
-        if (this.current == 0 && number != '.') this.current = ''
+        if (this.current === 0 && number != '.') this.current = ''
 
         // Det går inte att skriva större tal än 100-tals miljoner atm
         if (this.current.length >= 9) return
 
-        this.current += number
+        this.current = this.current.toString() + number.toString()
+        this.updateDisplay()
+        console.log(this.current);
     }
 
     addOperator(operator) {
@@ -130,7 +134,7 @@ class Calculator {
     }
 
     updateDisplay() {
-        this.currentDisplay.innerHTML = this.getDisplayNumbers(this.current)  
+        this.currentDisplay.innerHTML = this.getDisplayNumbers(this.current)
     }
 }
 
@@ -163,7 +167,6 @@ percent.addEventListener("click", () => {
 
 numbers.forEach(number => number.addEventListener("click", () => {
     calculator.addNumber(number.innerHTML)
-    calculator.updateDisplay()
     operators.forEach(operator => operator.classList.remove("chosen"))
 }))
 
