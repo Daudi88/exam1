@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* GLOBALS */
+/* Globalt */
 :root {
     --clr-primary: #001B36;
     --clr-primary-light: #BECADB;
@@ -30,7 +30,7 @@ header {
     color: var(--clr-secondary);
 }
 
-/* NAV */
+/* Nav */
 .navbar {
     background-color: var(--clr-primary);
     display: flex;
@@ -106,7 +106,7 @@ header {
     transition: 0.3s;
 }
 
-/* HERO */
+/* Hero */
 .hero {
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@ header {
     color: var(--clr-secondary);
 }
 
-/* MAIN */
+/* Main */
 .about {
     background-color: var(--clr-secondary);
     padding: 2em;
@@ -195,19 +195,25 @@ header {
     padding: 2em;
 }
 
-/* CALCULATOR */
+/* Projekt*/
+.project {
+    min-height: 50vh;
+    min-width: 15em;
+    max-width: 20em;
+    border-radius: 2em;
+    
+    margin: 0 auto;
+}
+
+/* Miniräknaren */
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, minmax(2em, 75px));
     grid-template-rows: minmax(10em, auto) repeat(5, 4.5em);
-    min-height: 50vh;
-    min-width: 15em;
-    max-width: 20em;
     background-color: black;
     border-radius: 2em;
-    padding: 1em;
-    margin: 0 auto;
     touch-action: manipulation;
+    padding: 1em;
 }
 
 .calc-display {
@@ -274,4 +280,53 @@ header {
     background-color: var(--clr-secondary);
     color: orange;
     opacity: 1;
+}
+
+/* Väderappen */
+.weather {
+    background-color: var(--clr-secondary);
+    border: 1px solid black;
+    margin-block: 3em;
+}
+
+.weather-header {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    margin: 0.5em auto;
+}
+
+.weather-display {
+    background-color: var(--clr-accent-light);
+    margin-block: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 12em;
+    margin: 0 auto;
+    margin-bottom: -1.5em;
+}
+
+.temperature-display {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.temperature-display span {
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.weather-description {
+    font-size: 1.5rem;
+}
+
+.location {
+    font-size: 1.2rem;
+    margin-bottom: 2em;
 }
