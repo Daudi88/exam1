@@ -332,7 +332,7 @@ header {
 }
 
 /* Footer */
-.footer {
+footer {
     background-color: var(--clr-primary);
     display: flex;
     justify-content: center;
@@ -342,6 +342,7 @@ header {
 }
 
 .social-link {
+    fill: var(--clr-secondary);
     opacity: 0.8;
     width: 3em;
     height: 3em;
