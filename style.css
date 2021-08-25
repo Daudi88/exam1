@@ -207,6 +207,7 @@ header {
     border-radius: 2em;
     padding: 1em;
     margin: 0 auto;
+    touch-action: manipulation;
 }
 
 .calc-display {

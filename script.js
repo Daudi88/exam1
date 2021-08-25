@@ -58,7 +58,6 @@ class Calculator {
 
         this.current = this.current.toString() + number.toString()
         this.updateDisplay()
-        console.log(this.current);
     }
 
     addOperator(operator) {
