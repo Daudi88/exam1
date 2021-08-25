@@ -332,7 +332,7 @@ header {
 }
 
 /* Footer */
-footer {
+.footer {
     background-color: var(--clr-primary);
     display: flex;
     justify-content: center;
@@ -341,16 +341,14 @@ footer {
     padding: 0.8em;
 }
 
-#Capa_1,
-#Capa_2 {
-    fill: var(--clr-secondary);
-    opacity: 0.85;
+.social-link {
+    opacity: 0.8;
     width: 3em;
     height: 3em;
     cursor: pointer;
 }
 
-#Capa_1:hover,
-#Capa_2:hover {
+.social-link:hover,
+.social-link:focus {
     opacity: 1;
 }
