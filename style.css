@@ -81,7 +81,7 @@ header {
     width: 100%;
     padding: 0;
     background-color: var(--clr-secondary);
-    transition: 0.3s;
+    transition: 0s;
     z-index: 2;
 }
 
@@ -103,6 +103,7 @@ header {
 
 .nav-menu.active {
     left: 0;
+    transition: 0.3s;
 }
 
 /* HERO */
