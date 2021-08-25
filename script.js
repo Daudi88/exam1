@@ -206,7 +206,7 @@ const apiKey = "d0ddcde2cb4705f0886de5a8d08c5456"
 
 // Hämtar nuvarande position
 if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(setPosition)
+    navigator.geolocation.getCurrentPosition(setPosition, showError)
 }
 
 // Tar ut kordinaterna som vi skickar till apiet
@@ -214,6 +214,10 @@ function setPosition(position) {
     let latitude = position.coords.latitude
     let longitude = position.coords.longitude
     getWeather(latitude, longitude)
+}
+
+function showError() {
+    weatherDescription.innerHTML = "något gick fel"
 }
 
 // Hämtar info från apiet
