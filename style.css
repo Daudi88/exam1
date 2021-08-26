@@ -203,7 +203,7 @@ header {
 
     .hero h1::before {
         content: "";
-        width: calc(3rem + 35vw);
+        width: calc(42vw - 1.6rem);
         max-width: 600px;
         height: 520px;
         /* height: calc(3rem + 35vw);
@@ -235,7 +235,7 @@ header {
     }
 
     .hero-rectangle h3 {
-        padding-inline: 1em;
+        padding-inline: calc(4vw - 2rem);
     }
 
     .btn {
