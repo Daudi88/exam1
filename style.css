@@ -145,7 +145,7 @@ header {
     background: url(img/forest-medium.jpg);
     background-size: cover;
     background-position: right;
-    height: 800px;
+    height: 850px;
     position: relative;
 }
 
@@ -204,8 +204,9 @@ header {
     .hero h1::before {
         content: "";
         width: calc(42vw - 1.6rem);
-        max-width: 600px;
-        height: 520px;
+        max-width: 635px;
+        height: calc(40vw + 12rem);
+        max-height: 680px;
         /* height: calc(3rem + 35vw);
         max-height: 540px; */
         background-color: var(--clr-primary);
@@ -220,8 +221,8 @@ header {
         grid-column: 2 / span 6;
         grid-row: 2;
         text-align: start;
-        padding-block: 1em 0;
-        padding-inline: 1em 0.5em;
+        padding-block: 0.8em 0;
+        padding-inline: 0.8em 0.5em;
         margin: 0;
         z-index: 1;
     }
@@ -230,12 +231,13 @@ header {
         position: relative;
         background-color: transparent;
         grid-column: 2 / span 4;
-        grid-row: 3;
+        grid-row: 3 / span 3;
         z-index: 1;
     }
 
     .hero-rectangle h3 {
-        padding-inline: calc(4vw - 2rem);
+        padding-inline: calc(5vw - 2rem);
+        margin: 0 auto;
     }
 
     .btn {
@@ -247,6 +249,14 @@ header {
 .about {
     background-color: var(--clr-secondary);
     padding: 2em;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-secondary);
+    padding: 3em;
 }
 
 .about h2,
@@ -265,7 +275,7 @@ header {
 }
 
 .description {
-    padding-block: 1.75em;
+    padding: 1.75em 1.25em;
 }
 
 .description h2 {
@@ -291,6 +301,17 @@ header {
     max-width: 20em;
     border-radius: 2em;
     margin: 0 auto;
+}
+
+.description a {
+    text-decoration: none;
+    color: var(--clr-primary);
+}
+
+.description a:hover {
+    cursor: pointer;
+    background-color: var(--clr-accent);
+    color: var(--clr-secondary);
 }
 
 /* Miniräknaren */
