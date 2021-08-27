@@ -142,7 +142,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: var(--clr-primary);
-    background: url(img/forest-medium.jpg);
+    background: url(img/forest.jpg);
     background-size: cover;
     background-position: right;
     height: 850px;
